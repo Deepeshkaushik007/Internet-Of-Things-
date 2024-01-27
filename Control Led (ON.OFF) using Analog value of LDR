@@ -1,0 +1,21 @@
+int led = 10;
+int ldr = A0;
+int ldrvalue = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode (led, OUTPUT);
+  pinMode (ldr, INPUT);
+}
+
+void loop() {
+  ldrvalue = analogRead (A0);
+  Serial.println(ldrvalue);
+  delay(200);
+  if (ldrvalue > 100)
+     {
+        digitalWrite (led, HIGH);
+     } 
+     else {
+      digitalWrite (led,LOW);}
+}
