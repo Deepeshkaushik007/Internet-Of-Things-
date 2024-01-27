@@ -1,0 +1,30 @@
+// // pattern like 1,12,123,1234 than off 
+//for 1st glow than, 1+2 glow than, 1+2+3 etc.....
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(500);
+  
+  digitalWrite(12, HIGH);
+  delay(500);
+  
+  digitalWrite(11, HIGH);
+  delay(500);
+  
+  digitalWrite(10, HIGH);
+  delay(500);
+  
+  digitalWrite(13,LOW);
+  digitalWrite(12,LOW);
+  digitalWrite(11,LOW);  
+  digitalWrite(10,LOW);
+  delay(1000);
+}
