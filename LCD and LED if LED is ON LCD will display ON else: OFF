@@ -1,0 +1,26 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int ledPin = 13;
+
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int ledState = digitalRead(ledPin);
+  if (ledState == HIGH) {
+    digitalWrite(ledPin, LOW);  
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("  LED: OFF");
+  } else {
+    digitalWrite(ledPin, HIGH);  
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("  LED: ON");
+  }
+  delay(1000);
+}
