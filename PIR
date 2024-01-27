@@ -1,0 +1,18 @@
+int ldrstate=0;
+int led=9;
+int pir=5;
+
+void setup() {
+ pinMode(led,OUTPUT);
+ pinMode(pir,INPUT);
+
+}
+
+void loop() {
+ ldrstate = digitalRead(pir);
+ if (ldrstate == HIGH){
+     digitalWrite(led,HIGH);}
+ else{
+   digitalWrite(led,LOW);
+ }
+}
