@@ -1,0 +1,13 @@
+ int a,b;
+ a=10;
+ b=5;
+ if (a>b)
+ {
+   Serial.print(a);
+   Serial.print("a is greater");
+ } 
+ else
+ {
+   Serial.print(b);
+   Serial.print("b is greater");
+ }
