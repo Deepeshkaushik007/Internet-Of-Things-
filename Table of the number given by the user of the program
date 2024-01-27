@@ -1,4 +1,7 @@
-int a,i;
+void setup() {
+ Serial.begin(9600);
+
+ int a,i;
  a=2;
  for (i=0; i<=10; i=i+1);
  Serial.print(a);
@@ -7,3 +10,8 @@ int a,i;
  Serial.print("=");
  Serial.print(a*i);
  Serial.println("");
+}
+
+void loop() {
+
+}
